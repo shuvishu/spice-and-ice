@@ -26,7 +26,6 @@ public class DBServiceUtilMySql implements DBServiceUtill{
 			statement.setString(3, objectToSave.bookingNumber);
 			statement.setString(4, objectToSave.status);
 			statement.setString(5, objectToSave.comments);
-			statement.setString(1, objectToSave.name);
 			flag = statement.executeUpdate();
 			
 			

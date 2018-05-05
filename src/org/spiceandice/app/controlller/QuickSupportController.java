@@ -47,7 +47,7 @@ public class QuickSupportController extends HttpServlet {
 		QuickSupport data = new QuickSupport(name, email, bookingId, status, comments);
 		Boolean saveFlag = new DBServiceUtilMySql().saveObject(data);
 		if(saveFlag)
-			response.getWriter().append("Saved succesfully").append(request.getContextPath());
+			response.getWriter().append("Saved succesfully" + data.toString() ).append(request.getContextPath());
 	}
 
 }

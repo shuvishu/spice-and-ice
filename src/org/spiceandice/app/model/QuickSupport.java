@@ -15,4 +15,14 @@ public class QuickSupport {
 	public String bookingNumber;
 	public String status;
 	public String comments;
+	@Override
+	public String toString() {
+		return "{\"quickSupportData\":{"+
+				"name :\""+this.name+
+				"\",email :\"" +this.email+
+				"\",bookingNumber :\"" +this.bookingNumber+
+				"\",status :\"" +this.status+
+				"\",comments :\"" +this.comments+
+				"\"}}";
+	}
 }
