@@ -13,5 +13,7 @@
 	</classpathentry>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
+	<classpathentry kind="lib" path="/home/knoldus/eclipse-workspace/spice-and-ice-web-app/javax.servlet-api.jar.zip"/>
+	<classpathentry kind="lib" path="/home/knoldus/eclipse-workspace/spice-and-ice-web-app/mysql-connector.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>

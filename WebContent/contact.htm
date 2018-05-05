@@ -6,18 +6,6 @@
 <link href="main.css" rel="stylesheet" type="text/css" />
 
 <script>
-window.onload = function() {
-var url = "localhost/gumball/sales.json";
-var request = new XMLHttpRequest();
-request.open("GET", url);
-request.onload = function() {
-if (request.status == 200) {
-document.write(request.responseText);
-}
-};
-request.send(null);
-}
-
 </script>
 
 </head>
@@ -43,31 +31,31 @@ request.send(null);
       <p>...and if you're on this page, we're guessing you've got something to say! Take a look at our contact options below. If none of them are right for you, feel free to call us at<span class="phone"> <strong>866.555.4310</strong>. You can also download one of our <a href="_assets/menu.pdf">Food Menu</a> for a quick reference guide for all our Menu. Please note that this is not the support line, for support information see below!</span></p>
       <h2>Support</h2>
       <p>If you have booked order,tables, or if you are waiting for home delivery and need our assistance, we've got a couple of options for you. </p>
-      <form id="frmSupport" name="frmSupport" method="post" action="support_process.htm">
+      <form id="frmSupport" name="frmSupport" method="post" action="QuickSupportController" onsubmit="checkFormFields()">
         <fieldset id="quickSupport">
           <legend><strong>Quick Support</strong></legend>
           <p> If your request isn't urgent, drop us a quick line and we'll get back to you within 24 hours </p>
           <p>
             <label for="name">Name:</label><br />
-            <input type="text" name="name" id="name" tabindex="10" class="quick" />
+            <input type="text" name="name" id="name" tabindex="10" class="quick" required />
           </p>
           <p>
             <label for="email">Email:</label><br />
-            <input type="text" name="email" id="email" tabindex="20" class="quick" />
+            <input type="text" name="email" id="email" tabindex="20" class="quick" required/>
           </p>
           <p>
             <label for="tourID">Booking No.: </label><br />
-            <input type="text" name="tourID" id="tourID" tabindex="30" class="quick" />
+            <input type="text" name="tourID" id="tourID" tabindex="30" class="quick" required/>
           </p>
           <p>Booking Status:<br />
             <label class="inline">
-              <input type="radio" name="tourStatus" value="booked" id="tourStatus_0" tabindex="40" />
+              <input type="radio" name="tourStatus" value="booked" id="tourStatus_0" tabindex="40" checked="true" />
               I have booked a Order</label>
             <label class="inline"><br />
               <input type="radio" name="tourStatus" value="current" id="tourStatus_1" tabindex="50" />
               I have booked a Table</label>
           </p>
-          <p>
+          <p>x  
             <label for="comments">Comments </label>
             <br />
             <textarea name="comments" id="comments" cols="45" rows="5" tabindex="60"></textarea>
@@ -260,5 +248,15 @@ request.send(null);
     </div>
   </div>
 </div>
+<script type="text/javascript">
+  function checkFormFields(){
+    var x = document.getElementById("frmSupport").elements;
+    var y = 0;
+    while(y < x.length){
+      console.log("====================>" + x[y] + "\n");
+      y++;
+    }
+  }
+</script>
 </body>
 </html>
