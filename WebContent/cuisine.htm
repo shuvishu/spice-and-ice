@@ -1,0 +1,166 @@
+
+<html >
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Our Cuisines</title>
+<link href="_css/main.css" rel="stylesheet" type="text/css" media="screen, projection" />
+
+
+
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){var socket = new WebSocket("ws://localhost:12345");
+$(".tourdescription a:link").click(function(){var nimage=new Image();socket.postMessage("Biryani");
+socket.postMessage("2");
+socket.postMessage("5");
+socket.postMessage("end");
+var newimageurl=$(this).attr("name");
+$(".tourdescription img:eq(4)").attr("src",newimageurl);
+});
+
+socket.onopen = function(){
+alert("Your socket is now open with the web service");
+}
+socket.postMessage("Biryani");
+socket.postMessage("2");
+socket.postMessage("5");
+socket.postMessage("end");
+socket.onmessage = function(event) {
+alert("From socket: " + event.data);
+};
+});
+
+
+</script></head>
+<body>
+<div id="wrapper">
+  <div id="header">
+    <h1><a href="index.htm" title="Return to the home page">Welcome to Explore California!</a></h1>
+  </div>
+  <div id="mainNav">
+   <ul id="baseNav">
+   <li><a href="cuisine.htm" title="Explore our tours" class="tours">Tours</a></li>
+    <li><a href="about.htm" title="What we think" class="mission current">About Us</a></li>
+      <li><a href="contact.htm" title="Contact and support" class="contact">Contact</a></li>   <li><a href="resources.htm" title="Guidance and planning" class="resources">Resources</a></li>
+        
+     <li><a href="menu.htm" title="See our Menu" class="explorers">Explorers</a></li>
+     </ul>
+ </div>
+  <div id="mainContent">
+    <h1 id="pageID">CUISINES</h1>
+    <div id="mainArticle">
+      <h1>Something for everyone</h1>
+      <p>What type of Cuisine experience do you want to Taste? <img src="_images/food_community.jpg" alt="The Great State of California!" width="350" height="331" class="articleImage" /> Spice n Ice is a harmonious blend of traditional and contemporary sophistication. Visually spectacular in every way, this elegant Indian restaurant is located at the lower lobby level overlooking the hotel's beautifully manicured gardens. Spice n Ice seamlessly married the traditional Indian themes with a simple palette of bespoke furnishings.</p>
+      <p>If you want to refine your search a bit, feel free to browse cuisine by <a href="tour_activity.htm">region</a> or <a href="resources/legal.htm">taste.</a>Chef Oberoi has taken International food to a different dimension with new techniques, innovative presentations and usage of organic produce and spices. He has reinvented Cuisines  with unusual creations and pairings. The menu is a rich accumulation of Indian recipes evolved to the next level. Spice n Ice retains the Indian traditional way of cooking while using exotic ingredients like sea bass, sand crab, black cod, morels and Iranian berries. If you have any questions about any of our tours, feel free to <a href="contact.htm">contact us</a>, or check out our handy <a href="explorers/join.htm">FAQ</a> for a quick overview of our services.</p>
+    </div>
+    <div id="tourDescriptions">
+      <div class="tourDescription">
+ <h2>Indian cuisine</h2>
+      <p><img src="_images/indian_cous.png" alt="Backpack Cal" width="195" height="120" />India cuisine or Indian food encompasses a wide variety of regional cuisines native to India. Given the range of diversity in soil type, climate and occupations, these cuisines vary significantly from each other and use locally available spices, herbs, vegetables and fruits.<a href="tours/tour_detail_backpack.htm" title="Backpack Cal" class="more">see more</a></p>
+<br><br>
+<img src="_images/mango.jpg" alt="Backpack Cal" width="136" height="99 " />
+<img src="_images/kadai.jpg" alt="Backpack Cal" width="136" height="99" />
+<img src="_images/wango.jpg" alt="Backpack Cal" width="136" height="99" />
+<img src="_images/kadai.jpg" alt="Backpack Cal" width="136" height="99" />
+</div>
+<div class="tourDescription">
+      <h2>Chinese cuisine</h2>
+      <p><img src="_images/china_cous.gif" width="195" height="120" alt="California Calm" />Chinese cuisine includes styles originating from the diverse regions of China, as well as from Chinese people in other parts of the world. The history of Chinese cuisine in China stretches back for thousands of years and has changed from period to period and in each region according to climate, imperial fashions, and local preferences. .<a href="" title="California Calm" class="more" name="_images/wango.jpg">learn more!</a></p>
+<br><br>
+<img src="_images/mango.jpg" alt="Backpack Cal" width="136" height="99 " />
+<img src="_images/kadai.jpg" alt="Backpack Cal" width="136" height="99" />
+<img src="_images/wango.jpg" alt="Backpack Cal" width="136" height="99" />
+<img src="_images/kadai.jpg" alt="Backpack Cal" width="136" height="99" /></div>
+<div class="tourDescription">
+      <h2>French cuisine</h2>
+      <p><img src="_images/french_cous.gif" width="195" height="120" alt="California Hot Springs" />French cuisine consists of cooking traditions and practices from France, famous for the rich tastes and subtle nuances with long and rich history. France, a country famous for its agriculture and independently minded peasants, was long a creative powerbase for delicious recipes, that are both healthy and refined.<a href="tourDetail_hotsprings.htm" title="California Hotsprings" class="more">learn more!</a></p><br><br>
+<img src="_images/mango.jpg" alt="Backpack Cal" width="136" height="99 " />
+<img src="_images/kadai.jpg" alt="Backpack Cal" width="136" height="99" />
+<img src="_images/wango.jpg" alt="Backpack Cal" width="136" height="99" />
+<img src="_images/kadai.jpg" alt="Backpack Cal" width="136" height="99" />
+</div>
+<div class="tourDescription">
+      <h2>Thai cuisine</h2>
+      <p><img src="_images/thai_cous.gif" width="195" height="120" alt="Cycle California" />Thai cooking places emphasis on lightly prepared dishes with strong aromatic components and a spicy edge. It known for its complex interplay of at least three and up to four or five fundamental taste senses in each dish or the overall meal: sour, sweet, salty, bitter and spicy<a href="tourDetail_cycle.htm" title="California Cycle" class="more">learn more!</a></p><br><br>
+<img src="_images/mango.jpg" alt="Backpack Cal" width="136" height="99 " />
+<img src="_images/kadai.jpg" alt="Backpack Cal" width="136" height="99" />
+<img src="_images/wango.jpg" alt="Backpack Cal" width="136" height="99" />
+<img src="_images/kadai.jpg" alt="Backpack Cal" width="136" height="99" />
+</div>
+<div class="tourDescription">
+      <h2>Kids Cuisine</h2>
+      <p><img src="_images/kids_desc_bug.gif" width="195" height="120" />Over and over again our customer support people would hear, "but what if we have kids?" Then it hit us...why not create tours specifically for kids?! California is an amazing playground for everyone and should be experienced by all. <a href="tourDetail_kids.htm" title="Kids California" class="more">learn more!</a></p><br><br><br><br>
+<img src="_images/mango.jpg" alt="Backpack Cal" width="136" height="99 " />
+<img src="_images/kadai.jpg" alt="Backpack Cal" width="136" height="99" />
+<img src="_images/wango.jpg" alt="Backpack Cal" width="136" height="99" />
+<img src="_images/kadai.jpg" alt="Backpack Cal" width="136" height="99" />
+</div>
+
+<div class="tourDescription">
+      <h2>Sweet Surprise</h2>
+      <p><img src="_images/sweet_surprise.gif" width="235" height="111" alt="Snow Cali" />The dessert station is a visual treat that teases diners throughout their meals. Vertical jalebis with three different flavours, green apple kheer or chocolate coated Indian ice cream with baileys rabdi are the finale to a grand meal.  <a href="tourDetail_snowboard.htm" title="Sweet Surprise" class="more">learn more!</a></p>
+<br><br>
+<img src="_images/mango.jpg" alt="Backpack Cal" width="136" height="99 " />
+<img src="_images/kadai.jpg" alt="Backpack Cal" width="136" height="99" />
+<img src="_images/wango.jpg" alt="Backpack Cal" width="136" height="99" />
+<img src="_images/kadai.jpg" alt="Backpack Cal" width="136" height="99" /></div>
+<div class="tourDescription">
+      <h2>Taste of California</h2>
+      <p><img src="_images/taste_desc_bug.gif" width="195" height="140" alt="Taste of California" />Wine Labels: The hotel master wine list comprises more than 350 labels, and 20 champagnes, representing all the major wine producing nations from both the old world and new wine producing regions.
+The hotel has 4 kinds of decanters ranging from Riedel to Schott Zwiesel. <a href="tourDetail_taste.htm" title="Taste of California" class="more">learn more!</a></p><br><br><br><br>
+<img src="_images/mango.jpg" alt="Backpack Cal" width="136" height="99 " />
+<img src="_images/kadai.jpg" alt="Backpack Cal" width="136" height="99" />
+<img src="_images/wango.jpg" alt="Backpack Cal" width="136" height="99" />
+<img src="_images/kadai.jpg" alt="Backpack Cal" width="136" height="99" />
+
+</div>
+    </div>
+  </div>
+  <div id="sidebar">
+      <div id="specials" class="callOut">
+      <h1>Monthly Specials</h1>
+      <h2 class="top"><img src="_images/dessert_bug.png" width="100" height="55" alt="Dessert Bites" />Dessert Bites</h2>
+      <p>Family Scoop <br />
+        <a href="join.htm">$25</a> </p>
+      <h2><img src="_images/kungfu_bug.png" width="100" height="92" alt="Shaolin soup" />Shaolin soup</h2>
+      <p>2 Bowls <br />
+        <a href="join.htm">$35</a></p>
+      <h2><img src="_images/fishi_bug.png" width="100" height="70" alt="Fish Grill" />Fish Grill</h2>
+      <p>Big 200G  <br />
+        <a href="join.htm">$62</a></p>
+    </div>
+      <div id="trivia" class="callOut">
+        <h1>Did You Know?</h1>
+        <p>The presentations of Chef Oberoi's exquisite culinary inventions are served amongst work by celebrated artist Anjolie Ela Menon.</p>
+      </div>
+    </div>
+  <div id="footer">
+<div id="footerMenu">
+  <h3>Quick Nav</h3>
+    <ul id="quickNav">
+      <li><a href="cuisine.htm" title="Explore our Cuisines">Cuisine</a></li>
+      <li><a href="about.htm" title="What we think">About us</a></li>
+      <li><a href="contact.htm" title="Contact and support">Contact</a></li>
+      <li><a href="resources.htm" title="Guidance and planning">Resources</a></li>
+      <li><a href="menu.htm" title="See our Menu">Menu</a></li>
+    </ul>
+</div>
+  <div id="footerBody">
+  <div id="footerMidCol">
+      <h3><a href="resources/faq.htm">FAQ</a></h3>
+      <p>Find out more about our Food and Services</p>
+      <h3><a href="contact.htm">Support</a></h3>
+      <p>Need help? It's just a click away!</p>
+      <h3><a href="legal.htm">Legal Disclaimer</a></h3>
+    </div>
+    <div id="footerRightCol">
+      <h1>Explore Spice n Ice</h1>
+      <p>5605 Noida Street<br />
+        Ventura, IN 93003</p>
+      <p class="phone">39999707</p>
+       </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

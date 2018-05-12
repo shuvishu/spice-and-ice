@@ -1,0 +1,263 @@
+<html >
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Take A Look to Menu</title>
+<link href="main.css" rel="stylesheet" type="text/css" media="screen, projection" />
+
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+$("#thumbStrip img").each(function(){var nimage=new Image();
+nimage.src=$(this).attr("title");});
+$("#thumbStrip img").click(function(){var nimage=new Image();
+var newimageurl=$(this).attr("title");
+$("#photoLarge").attr("src",newimageurl);
+var type=$(this).attr("name");
+if(type=="thumb1")
+{$("#contents1 span:first").text("Desserts");
+$("#menus ul.main h3:eq(0)").text("Pasteries");
+$("#menus ul.main h3:eq(1)").text("Sweets");
+$("#menus ul.main h3:eq(2)").text("Ice Creams");
+$("#menus ul.main h3:eq(3)").text("pacifoco");}
+else if(type=="thumb2")
+{$("#contents1 span:first").text("Drinks");
+$("#menus ul.main h3:eq(0)").text("Wine");
+$("#menus ul.main h3:eq(1)").text("Wodka");
+$("#menus ul.main h3:eq(2)").text("Beers");
+$("#menus ul.main h3:eq(3)").text("Vintage");}
+else if(type=="thumb3")
+{$("#contents1 span:first").text("Main Course");
+$("#menus ul.main h3:eq(0)").text("beef");
+$("#menus ul.main h3:eq(1)").text("pork");
+$("#menus ul.main h3:eq(2)").text("chicken");
+$("#menus ul.main h3:eq(3)").text("seafood");}
+else
+{$("#contents1 span:first").text("Entree");
+$("#menus ul.main h3:eq(0)").text("Snacks");
+$("#menus ul.main h3:eq(1)").text("Soups");
+$("#menus ul.main h3:eq(2)").text("Fast food");
+$("#menus ul.main h3:eq(3)").text("Salads");}
+
+});
+});
+</script>
+</head>
+<body >
+<div class="hasCrumbs" id="wrapper">
+  <div id="header">
+    <h1><a href="index.htm" title="Return to the home page">Welcome to Spice n Ice!</a></h1>
+  </div>
+  <div id="mainNav">
+     <ul id="baseNav">
+          <li><a href="cuisine.htm" title="Explore our Cuisines" class="tours">Tours</a></li>
+   <li><a href="ABOUT.HTM" title="What we think" class="mission">Mission</a></li>
+     <li><a href="contact.htm" title="Contact and support" class="contact">Contact</a></li>
+      <li><a href="resources.htm" title="Guidance and planning" class="resources">Resources</a></li>
+      <li><a href="menu.htm" title="Join our community" class="explorers parent">Menu</a>
+     </li>
+    </ul>
+  </div>
+  <div id="mainContent">
+    <h1 id="pageID">Menu</h1>
+      <div id="mainArticle">
+      <h1>Explore Our Menu 
+</h1>
+      <a href="_assets/menu.pdf">Food Menu</a>  <p>Spice n Ice is a harmonious blend of traditional and contemporary sophistication. Visually spectacular in every way, this elegant Indian restaurant is located at the lower lobby level overlooking the hotel's beautifully manicured gardens. Spice n Ice seamlessly married the traditional Indian themes with a simple palette of bespoke furnishings.</p>
+    </div>
+    <div id="photoGallery">
+    <div id="largeImage"><img src="_images/gallery_interact/dessert_large.jpg" alt="golden gate bridge" name="photoLarge" width="588" height="388" class="galleryImage" id="photoLarge" onload="MM_effectAppearFade(this, 1500, 30, 100, false)" />
+    </div>
+    <div id="thumbStrip">
+    <div class="thumb"><img src="_images/gallery_interact/dessert_thumb.jpg" alt="golden gate bridge" name="thumb1" width="100" height="100" id="thumb1" title="_images/gallery_interact/dessert_large.jpg" /><p>Desserts</p>
+    </div>
+    <div class="thumb"><img src="_images/gallery_interact/drink_thumb.jpg" alt="olive grove" name="thumb2" width="100" height="100" id="thumb2" title="_images/gallery_interact/drink_large.jpg" /><p>Drinks</p>
+    </div>
+    <div class="thumb" id="t1"><img src="_images/gallery_interact/main_thumb.jpg" alt="shore bird" name="thumb3" width="100" height="100" id="thumb3" title="_images/gallery_interact/main_large.jpg" /><p>Main Course</p>
+    </div>
+    <div class="thumb last"><img src="_images/gallery_interact/entree_thumb.jpg" alt="orange groves" name="thumb4" width="100" height="100" id="thumb4" title="_images/gallery_interact/entree_large.jpg" /><p>Entree</p>
+    </div>
+    </div>
+    </div> 
+<div id="contents1" > <!-- start of contents --> 
+
+		<h2 class="main-course" align=center ><span style="color: #265d84;font-family:'DynalightRegular';font-size:42px;margin: 0px 0px 5px;" >Dessert</span></h2>
+		<div id="menus">
+			<ul class="main">
+				<li>
+					<h3>Pasteries</h3>
+					<ul style="font-family:'DynalightRegular';font-size:20px;">
+						<li>
+							<span class="price">$9.78</span>
+							Lorem ipsum
+							
+						</li>
+						<li>
+							<span class="price">$9.78</span>
+							Dolor sit amet
+							
+						</li>
+						<li>
+							<span class="price">$9.78</span>
+							Consectetur
+							
+						</li>
+						<li>
+							<span class="price">$9.78</span>
+							Adipiscing elit
+							
+						</li>
+						<li>
+							<span class="price">$9.78</span>
+							Aliquam dui
+							
+						</li>
+					</ul>
+				</li>
+				<li>
+					<h3>Sweets</h3>
+					<ul style="font-family:'DynalightRegular';font-size:20px;">
+						<li>
+							<span class="price">$9.78</span>
+							Lorem ipsum
+							
+						</li>
+						<li>
+							<span class="price">$9.78</span>
+							Dolor sit amet
+							
+						</li>
+						<li>
+							<span class="price">$9.78</span>
+							Consectetur
+							
+						</li>
+						<li>
+							<span class="price">$9.78</span>
+							Adipiscing elit
+							
+						</li>
+						<li>
+							<span class="price">$9.78</span>
+							Aliquam dui
+							
+						</li>
+					</ul>
+				</li><br>
+				<li>
+					<h3>Ice Creams</h3>
+					<ul style="font-family:'DynalightRegular';font-size:20px;">
+						<li>
+							<span class="price">$9.78</span>
+							Lorem ipsum
+							
+						</li>
+						<li>
+							<span class="price">$9.78</span>
+							Dolor sit amet
+							
+						</li>
+						<li>
+							<span class="price">$9.78</span>
+							Consectetur
+							
+						</li>
+						<li>
+							<span class="price">$9.78</span>
+							Adipiscing elit
+							
+						</li>
+						<li>
+							<span class="price">$9.78</span>
+							Aliquam dui
+							
+						</li>
+					</ul>
+				</li><br>
+				<li>
+					<h3>pocifico</h3>
+					<ul style="font-family:'DynalightRegular';font-size:20px;">
+						<li>
+							<span class="price">$9.78</span>
+							Lorem ipsum
+							
+						</li>
+						<li>
+							<span class="price">$9.78</span>
+							Dolor sit amet
+							
+						</li>
+						<li>
+							<span class="price">$9.78</span>
+							Consectetur
+							
+						</li>
+						<li>
+							<span class="price">$9.78</span>
+							Adipiscing elit
+							
+						</li>
+						<li>
+							<span class="price">$9.78</span>
+							Aliquam dui
+							
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+		
+		</div>
+
+
+You can also download one of our <a href="_assets/menu.pdf">Food Menu</a> for a quick reference guide for all our Menu.  
+
+  </div>
+
+
+ <div id="sidebar">
+      <div id="specials" class="callOut">
+      <h1>Monthly Specials</h1>
+      <h2 class="top"><img src="_images/dessert_bug.png" width="100" height="55" alt="Dessert Bites" />Dessert Bites</h2>
+      <p>Family Scoop <br />
+        <a href="join.htm">$25</a> </p>
+      <h2><img src="_images/kungfu_bug.png" width="100" height="92" alt="Shaolin soup" />Shaolin soup</h2>
+      <p>2 Bowls <br />
+        <a href="join.htm">$35</a></p>
+      <h2><img src="_images/fishi_bug.png" width="100" height="70" alt="Fish Grill" />Fish Grill</h2>
+      <p>Big 200G  <br />
+        <a href="join.htm">$62</a></p>
+    </div>
+      <div id="trivia" class="callOut">
+        <h1>Did You Know?</h1>
+        <p>The presentations of Chef Oberoi's exquisite culinary inventions are served amongst work by celebrated artist Anjolie Ela Menon.</p>
+      </div>
+    </div>
+  <div id="footer">
+<div id="footerMenu">
+  <h3>Quick Nav</h3>
+    <ul id="quickNav">
+      <li><a href="cuisine.htm" title="Explore our Cuisines">Cuisine</a></li>
+      <li><a href="cuisine.htm" title="What we think">About us</a></li>
+      <li><a href="contact.htm" title="Contact and support">Contact</a></li>
+      <li><a href="resources.htm" title="Guidance and planning">Resources</a></li>
+      <li><a href="menu.htm" title="See our Menu">Menu</a></li>
+    </ul>
+</div>
+  <div id="footerBody">
+  <div id="footerMidCol">
+      <h3><a href="faq.htm">FAQ</a></h3>
+      <p>Find out more about our Food and Services</p>
+      <h3><a href="contact.htm">Support</a></h3>
+      <p>Need help? It's just a click away!</p>
+      <h3><a href="legal.htm">Legal Disclaimer</a></h3>
+    </div>
+    <div id="footerRightCol">
+      <h1>Explore Spice n Ice</h1>
+      <p>5605 Noida Street<br />
+Ventura, IN 93003</p>
+      <p class="phone">39999707</p>  </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
