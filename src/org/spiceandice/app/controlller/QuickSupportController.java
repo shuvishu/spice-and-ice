@@ -1,6 +1,7 @@
 package org.spiceandice.app.controlller;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -31,8 +32,10 @@ public class QuickSupportController extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+		String data = new DBServiceUtilMySql().retrieveAllData();
+		 response.setContentType("text/plain");
+		    PrintWriter out=response.getWriter();
+		    out.print(data);
 	}
 
 	/**
@@ -47,7 +50,9 @@ public class QuickSupportController extends HttpServlet {
 		QuickSupport data = new QuickSupport(name, email, bookingId, status, comments);
 		Boolean saveFlag = new DBServiceUtilMySql().saveObject(data);
 		if(saveFlag)
+			request.setAttribute("data", data.toString());
 			response.getWriter().append("Saved succesfully" + data.toString() ).append(request.getContextPath());
+			response.sendRedirect("showData.jsp");
 	}
 
 }

@@ -34,27 +34,27 @@
     </div><div id="contents2"> <!-- start of contents --> 
 		<h2 class="booking" align=center ><span style="color: #265d84;font-family:'DynalightRegular';font-size:50px;margin: 0px 0px 5px;">Book an Event</span></h2>
 		<div id="booking">
-			<form action="" method="">
+			<form action="EventBookingController" method="post">
 				<table>
 					<tbody>
 						<tr>
-							<td colspan="2"><span>Your Name</span><input type="text" class="name"></td>
-							<td><span>Your Email</span><input type="text"></td>
+							<td colspan="2"><span>Your Name</span><input type="text" class="name" required></td>
+							<td><span>Your Email</span><input type="text" required></td>
 						</tr>
 						<tr>
-							<td><span>Date</span><input type="text"></td>
-							<td><span>No. of people</span><input type="text"  class="number"></td>
+							<td><span>Date</span><input type="text" required></td>
+							<td><span>No. of people</span><input type="text"  class="number" required></td>
 							<td>
 								<span>Room Preference</span>
-								<label for="outdoor"><input type="radio" class="radio" id="outdoor" name="preference">Outdoor</label>
+								<label for="outdoor"><input type="radio" class="radio" id="outdoor" name="preference" checked>Outdoor</label>
 								<label for="indoor"><input type="radio" class="radio" id="indoor" name="preference">Indoor</label>
 							</td>
 						</tr>
 						<tr>
 							<td colspan="3">
 								<span>Is this a special occasion? Please tell us here?</span>
-								<textarea></textarea>
-								<input type="submit" value="Submit" class="button" onclick='alert("Your Event is Booked.Booking number is 1345");'>
+								<textarea name = "special" id = "special"></textarea>
+								<input type="submit" value="Submit" class="button">
 							</td>
 						</tr>
 					</tbody>

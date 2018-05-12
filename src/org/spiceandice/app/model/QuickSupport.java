@@ -18,11 +18,11 @@ public class QuickSupport {
 	@Override
 	public String toString() {
 		return "{\"quickSupportData\":{"+
-				"name :\""+this.name+
-				"\",email :\"" +this.email+
-				"\",bookingNumber :\"" +this.bookingNumber+
-				"\",status :\"" +this.status+
-				"\",comments :\"" +this.comments+
+				"\"name\" :\""+this.name+
+				"\",\"email\" :\"" +this.email+
+				"\",\"bookingNumber\" :\"" +this.bookingNumber+
+				"\",\"status\" :\"" +this.status+
+				"\",\"comments\" :\"" +this.comments+
 				"\"}}";
 	}
 }
