@@ -49,10 +49,12 @@ public class QuickSupportController extends HttpServlet {
 		String comments = request.getParameter("comments");
 		QuickSupport data = new QuickSupport(name, email, bookingId, status, comments);
 		Boolean saveFlag = new DBServiceUtilMySql().saveObject(data);
-		if(saveFlag)
-			request.setAttribute("data", data.toString());
-			response.getWriter().append("Saved succesfully" + data.toString() ).append(request.getContextPath());
-			response.sendRedirect("showData.jsp");
+		if(saveFlag) {
+			PrintWriter out=response.getWriter();
+		    out.print("<script type='text/javascript'>alert('data has been saves succesfully');</script>");
+		    request.getRequestDispatcher("contact.htm").include(request, response);
+			
+			}
 	}
 
 }
